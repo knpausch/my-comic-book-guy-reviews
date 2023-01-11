@@ -7,6 +7,7 @@ import EpisodeBank from "../EpisodeBank/EpisodeBank";
 import EpisodeDetail from "../EpisodeDetail/EpisodeDetail";
 import RankInterface from "../RankInterface/RankInterface";
 import { Route, Switch } from 'react-router-dom'
+import { response } from "../../apiCalls";
 
 class App extends Component {
   constructor() {
@@ -14,6 +15,14 @@ class App extends Component {
     this.state = {
       episodes: []
     }
+  }
+
+  componentDidMount = () => {
+    response.then(data => {
+      this.setState({ episodes: data })
+      console.log("FETCH DATA: ", data)
+      return
+    })
   }
 
   render() {
