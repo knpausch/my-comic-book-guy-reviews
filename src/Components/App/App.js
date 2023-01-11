@@ -8,6 +8,7 @@ import EpisodeDetail from "../EpisodeDetail/EpisodeDetail";
 import RankInterface from "../RankInterface/RankInterface";
 import { Route, Switch } from 'react-router-dom'
 import { response } from "../../apiCalls";
+import { cleanData } from "../../cleanData";
 
 class App extends Component {
   constructor() {
@@ -17,12 +18,15 @@ class App extends Component {
     }
   }
 
-  componentDidMount = () => {
+  getData = () => {
     response.then(data => {
-      this.setState({ episodes: data })
-      console.log("FETCH DATA: ", data)
+      this.setState({ episodes: cleanData(data) })
       return
     })
+  }
+
+  componentDidMount = () => {
+    this.getData()
   }
 
   render() {
