@@ -1,6 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import './App.css'
+import Banner from '../Banner/Banner'
 
 class App extends Component{
   constructor(){
@@ -13,7 +14,7 @@ class App extends Component{
   render(){
     return(
       <main>
-        <h1>My Comic Book Guy Reviews</h1>
+        <Banner />
       </main>
     )
   }
