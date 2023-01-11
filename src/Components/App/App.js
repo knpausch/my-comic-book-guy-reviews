@@ -20,31 +20,20 @@ class App extends Component {
     return (
       <main>
         <Banner />
-        {/* <Switch> */}
+        <Switch>
           <Route exact path='/' render={() => {
             return <div>
               <RankResult />
               <EpisodeBank />
             </div>
           }} />
-        {/* </Switch> */}
-
-        {/* <Switch>
-          <Route exact path="/" render={() => {
-            <div>
-              <RankResult />
-              <EpisodeBank />
-            </div>
-            return
-          }} />
           <Route exact path="/episodeDetails" render={() => {
-            <div>
+            return <div>
               <EpisodeDetail />
               <RankInterface />
             </div>
-            return
           }} />
-        </Switch> */}
+        </Switch>
       </main>
     )
   }
