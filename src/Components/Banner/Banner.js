@@ -1,10 +1,11 @@
 import React from "react";
 import './Banner.css'
+const logo = require('../../images/review-banner.jpg')
 
 const Banner = () => {
     return(
-        <div>
-            <h1>My Comic Book Guy Reviews!</h1>
+        <div className='banner-container'>
+            <img src={logo} className='banner-img'/>
         </div>
     )
 }

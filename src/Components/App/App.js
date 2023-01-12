@@ -31,7 +31,7 @@ class App extends Component {
 
   render() {
     return (
-      <main>
+      <main className="app">
         <Banner />
         <Switch>
           <Route exact path='/' render={() => {
