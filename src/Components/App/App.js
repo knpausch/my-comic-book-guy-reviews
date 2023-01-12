@@ -37,7 +37,7 @@ class App extends Component {
           <Route exact path='/' render={() => {
             return <div>
               <RankResult />
-              <EpisodeBank />
+              <EpisodeBank episodes={this.state.episodes}/>
             </div>
           }} />
           <Route exact path="/episodeDetails" render={() => {

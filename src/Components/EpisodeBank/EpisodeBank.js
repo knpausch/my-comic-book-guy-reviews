@@ -1,10 +1,16 @@
 import React from "react";
 import './EpisodeBank.css'
+import EpisodeThumbnail from "../EpisodeThumbnail/EpisodeThumbnail";
 
-const EpisodeBank = () => {
-    return(
+const EpisodeBank = ({ episodes }) => {
+    const episodeImgs = episodes.map(episode => {
+        return <EpisodeThumbnail 
+        img = {episode.img}
+        />
+    })
+    return (
         <div>
-            <h3>200+ episodes</h3>
+            {episodeImgs}
         </div>
     )
 }
