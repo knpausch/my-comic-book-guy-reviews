@@ -1,0 +1,10 @@
+.bank-container {
+    border-style: dashed;
+    max-width: fit-content;
+    height: 40vh;
+    max-height: 100%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-gap: 0.5vw; */
+}
