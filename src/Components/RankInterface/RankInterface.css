@@ -1,0 +1,59 @@
+.rank-interface-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.my-review-text{
+    margin: 0;
+    font-size: 30px;
+}
+
+.my-review-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F0F0;
+    position: relative;
+    top: 30px;
+    width: 15vw;
+    height: 5vh;
+    border-radius: 40px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #1E2430;
+}
+
+.button-ui{
+    border-style: solid;
+    border-width: 4px;
+    border-color: #1E2430;
+    border-radius: 20px;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.rank-img{
+    width: 8vw;
+}
+
+.rank-button{
+    background-color: #FEC356;
+    border-style: none;
+    border-radius: 100%;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.button-text{
+    margin: 0;
+}
