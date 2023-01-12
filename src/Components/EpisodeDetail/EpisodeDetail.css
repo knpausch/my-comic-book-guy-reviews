@@ -1,0 +1,36 @@
+.episode-details-and-button-container{
+    margin-top: 5vh;
+}
+
+.go-back-button{
+    border-style: none;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #1E2430;
+    border-radius: 40px;
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.go-back-img{
+    width: 3vw;
+}
+
+.episode-details-container{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #1E2430;
+    width: 70vw;
+    border-radius: 20px;
+    height: 40vh;
+}
