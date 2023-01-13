@@ -34,9 +34,9 @@ class App extends Component {
   }
 
   //remove when done experiementing
-  // componentDidUpdate = () => {
-  //   console.log("YO: ", this.state.episodes)
-  // }
+  componentDidUpdate = () => {
+    console.log('you working?: ', this.state.currentEpisode)
+  }
 
   updateRating = (id, rating) => {
     const foundEpisode = this.state.episodes.find(episode => {
@@ -49,10 +49,11 @@ class App extends Component {
 
   setCurrentEpisode = (id) => {
     console.log("Episode id selected: ", id)
-    //   const foundEpisode = this.state.episodes.find(episode => {
-    //     return episode.id === id
-    // })
-    // console.log("hello: ", foundEpisode)
+      const foundEpisode = this.state.episodes.find(episode => {
+        return episode.id === id
+    })
+    console.log("Episode selected: ", foundEpisode)
+    this.setState({currentEpisode: foundEpisode})
     // this.setState.currentEpisode=foundEpisode
   }
 
