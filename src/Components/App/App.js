@@ -29,6 +29,11 @@ class App extends Component {
     this.getData()
   }
 
+  //remove when done experiementing
+  componentDidUpdate = () => {
+    console.log("YO: ",this.state.episodes[90])
+  }
+
   render() {
     return (
       <main className="app">
