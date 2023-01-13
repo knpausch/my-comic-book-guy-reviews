@@ -10,8 +10,8 @@ export const cleanData = (data) => {
         episodeData.airDate = date
         episodeData.description = episode.description
         episodeData.episodeNum = episode.episode
-        episodeData.id = episode.id-1
-        episodeData.key = episode.id-1
+        episodeData.id = episode.id
+        episodeData.key = episode.id
         episodeData.myRating = ""
         episodeData.name = episode.name
         episodeData.popularityRating = episode.rating
