@@ -7,15 +7,17 @@ import { NavLink } from 'react-router-dom'
 const tvImg = require('../../images/tv.png')
 const turnBackImg = require('../../images/turn-back.png')
 
-const EpisodeDetail = ({ episodes }) => {
+const EpisodeDetail = ({ episodes, currentEpisode }) => {
 
     //FINDS ID AND EPISODE
-    let id = parseInt(useParams().id);
-    console.log("You entered: ", id)
-    const foundEpisode = episodes.find(episode => {
-        return episode.id === id
-    })
-    console.log("Found Episode: ", foundEpisode)
+    // let id = parseInt(useParams().id);
+    // console.log("You entered: ", id)
+    // const foundEpisode = episodes.find(episode => {
+    //     return episode.id === id
+    // })
+    // console.log("Found Episode: ", foundEpisode)
+
+    const foundEpisode = episodes[0]
 
     return (
         <div className='episode-details-and-button-container'>

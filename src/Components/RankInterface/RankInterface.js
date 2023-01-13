@@ -4,10 +4,11 @@ const krustyButtonImg = require('../../images/krusty.png')
 const lisaButtonImg = require('../../images/lisa.png')
 const lennyButtonImg = require('../../images/lenny.png')
 
-const RankInterface = () => {
+const RankInterface = ({ updateRating }) => {
 
     const handleChange = event => {
-        console.log(event.target.name)
+        // console.log("You selected: ", event.target.name)
+        // updateRating(4, event.target.name)
     }
 
     return (
@@ -18,15 +19,15 @@ const RankInterface = () => {
             <div className="button-ui">
 
                 <div className='button-container'>
-                    <button className='rank-button'><img src={krustyButtonImg} name='krusty' className='rank-img' onClick={event => {handleChange(event)}}/></button>
+                    <button className='rank-button'><img src={krustyButtonImg} name='krusty' className='rank-img' onClick={event => { handleChange(event) }} /></button>
                     <h3 className="button-text">"What the hell was that?"</h3>
                 </div>
                 <div className='button-container'>
-                    <button className='rank-button'><img src={lisaButtonImg} name='lisa' className='rank-img' onClick={event => {handleChange(event)}}/></button>
+                    <button className='rank-button'><img src={lisaButtonImg} name='lisa' className='rank-img' onClick={event => { handleChange(event) }} /></button>
                     <h3 className="button-text">"Meh"</h3>
                 </div>
                 <div className='button-container'>
-                    <button className='rank-button'><img src={lennyButtonImg} name='lenny' className='rank-img' onClick={event => {handleChange(event)}}/></button>
+                    <button className='rank-button'><img src={lennyButtonImg} name='lenny' className='rank-img' onClick={event => { handleChange(event) }} /></button>
                     <h3 className="button-text">Lenny Appoved</h3>
                 </div>
 

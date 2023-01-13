@@ -15,6 +15,7 @@ class App extends Component {
     super()
     this.state = {
       episodes: [],
+      currentEpisode: {},
       krustyList: [],
       LisaList: [],
       LennyList: []
@@ -33,8 +34,26 @@ class App extends Component {
   }
 
   //remove when done experiementing
-  componentDidUpdate = () => {
-    console.log("YO: ",this.state.episodes)
+  // componentDidUpdate = () => {
+  //   console.log("YO: ", this.state.episodes)
+  // }
+
+  updateRating = (id, rating) => {
+    const foundEpisode = this.state.episodes.find(episode => {
+      return episode.id === id
+    })
+    foundEpisode.myRating = rating
+
+    console.log("after: ", this.state.episodes)
+  }
+
+  setCurrentEpisode = (id) => {
+    console.log("Episode id selected: ", id)
+    //   const foundEpisode = this.state.episodes.find(episode => {
+    //     return episode.id === id
+    // })
+    // console.log("hello: ", foundEpisode)
+    // this.setState.currentEpisode=foundEpisode
   }
 
   render() {
@@ -44,14 +63,14 @@ class App extends Component {
         <Switch>
           <Route exact path='/' render={() => {
             return <div>
-              <RankResult krustyList={this.state.krustyList}/>
-              <EpisodeBank episodes={this.state.episodes}/>
+              <RankResult krustyList={this.state.krustyList} />
+              <EpisodeBank episodes={this.state.episodes} setCurrentEpisode={this.setCurrentEpisode}/>
             </div>
           }} />
           <Route exact path="/episodeDetails/:id" render={() => {
             return <div>
-              <EpisodeDetail episodes={this.state.episodes}/>
-              <RankInterface />
+              <EpisodeDetail episodes={this.state.episodes} currentEpisode={this.state.currentEpisode} />
+              <RankInterface updateRating={this.updateRating} />
             </div>
           }} />
         </Switch>
