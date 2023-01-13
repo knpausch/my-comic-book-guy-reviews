@@ -40,9 +40,9 @@ class App extends Component {
               <EpisodeBank episodes={this.state.episodes}/>
             </div>
           }} />
-          <Route exact path="/episodeDetails" render={() => {
+          <Route exact path="/episodeDetails/:id" render={() => {
             return <div>
-              <EpisodeDetail />
+              <EpisodeDetail episodes={this.state.episodes}/>
               <RankInterface />
             </div>
           }} />

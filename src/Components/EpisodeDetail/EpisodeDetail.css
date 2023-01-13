@@ -9,9 +9,6 @@
     border-color: #1E2430;
     border-radius: 40px;
     font-size: 3vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     justify-content: space-evenly;
     padding-left: 20px;
     padding-right: 20px;
@@ -20,18 +17,40 @@
     margin-bottom: 5px;
 }
 
-.go-back-img{
-    width: 3vw;
-}
-
 .episode-details-container{
     display: flex;
     justify-content: center;
     justify-content: space-between;
-    border-style: solid;
     border-width: 4px;
     border-color: #1E2430;
     width: 70vw;
     border-radius: 20px;
-    height: 40vh;
+    height: 35vh;
+}
+
+.episode-img{
+    width: 100%;
+    margin-top: 15px;
+    border-top: 20px;
+    border-bottom: 20px;
+    border-style: solid;
+}
+
+.tv-img{
+    position: absolute;
+    width: 200%;
+}
+
+.img-overlay-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    position: relative;
+    margin-right: 7%;
+    margin-bottom: 3%;
+}
+
+a{
+    text-decoration: none;
 }

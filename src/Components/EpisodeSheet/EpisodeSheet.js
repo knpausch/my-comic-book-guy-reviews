@@ -1,12 +1,21 @@
 import React from "react";
 import './EpisodeSheet.css'
 
-const EpisodeSheet = () => {
-    return(
+const EpisodeSheet = ({ airDate, description, episodeNum, id, name, popularityRating, season, img }) => {
+    return (
         <div className='episode-sheet'>
-            <h4>Name: Duffless</h4>
-            <h5>Season: 1</h5>
-            <h6>Episoe: 5</h6>
+            <h1 className="ep-name">{name}</h1>
+            <div className="season-episode-container">
+                <h2 className="ep-season">Season: {season}</h2>
+                <h2 className="ep-episode">Episode: {episodeNum}</h2>
+            </div>
+            <h3 className="description-text">Description:</h3>
+            <h3 className="ep-description">"{description}"</h3>
+            <div className="popularity-air-date-container">
+                <h4 className="ep-popularity">⭐️Audience Score: {popularityRating}/10</h4>
+                <h4 className="ep-air-date">📺Air Date: {airDate}</h4>
+            </div>
+
         </div>
     )
 }
