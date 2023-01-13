@@ -14,7 +14,10 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      episodes: []
+      episodes: [],
+      krustyList: [],
+      LisaList: [],
+      LennyList: []
     }
   }
 
@@ -31,7 +34,7 @@ class App extends Component {
 
   //remove when done experiementing
   componentDidUpdate = () => {
-    console.log("YO: ",this.state.episodes[90])
+    console.log("YO: ",this.state.episodes)
   }
 
   render() {
@@ -41,7 +44,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' render={() => {
             return <div>
-              <RankResult />
+              <RankResult krustyList={this.state.krustyList}/>
               <EpisodeBank episodes={this.state.episodes}/>
             </div>
           }} />
