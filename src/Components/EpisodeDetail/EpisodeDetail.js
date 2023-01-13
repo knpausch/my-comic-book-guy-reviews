@@ -2,6 +2,7 @@ import React from "react";
 import './EpisodeDetail.css'
 import EpisodeSheet from "../EpisodeSheet/EpisodeSheet";
 import { useParams } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 
 const tvImg = require('../../images/tv.png')
 const turnBackImg = require('../../images/turn-back.png')
@@ -18,7 +19,9 @@ const EpisodeDetail = ({ episodes }) => {
 
     return (
         <div className='episode-details-and-button-container'>
-            <button className='go-back-button'>Go Back <img src={turnBackImg} className='go-back-img' /></button>
+            <NavLink to={`/`}>
+                <button className='go-back-button'>Home</button>
+            </NavLink>
             <div className='episode-details-container'>
                 <EpisodeSheet
                     airDate={foundEpisode.airDate}
@@ -33,7 +36,7 @@ const EpisodeDetail = ({ episodes }) => {
                 />
                 <div className="img-overlay-container">
                     <img src={foundEpisode.img} className='episode-img' />
-                    <img src={tvImg} className='tv-img'/>
+                    <img src={tvImg} className='tv-img' />
                 </div>
             </div>
         </div>

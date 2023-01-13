@@ -9,19 +9,12 @@
     border-color: #1E2430;
     border-radius: 40px;
     font-size: 3vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     justify-content: space-evenly;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 5px;
-}
-
-.go-back-img{
-    width: 3vw;
 }
 
 .episode-details-container{
@@ -56,4 +49,8 @@
     position: relative;
     margin-right: 7%;
     margin-bottom: 3%;
+}
+
+a{
+    text-decoration: none;
 }

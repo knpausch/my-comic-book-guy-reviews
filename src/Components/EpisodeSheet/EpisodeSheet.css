@@ -29,6 +29,7 @@
 .description-text{
     margin-bottom: 0px;
     font-size: 25px;
+    margin-left: 10px;
 }
 
 .ep-episode{
@@ -40,8 +41,8 @@
 
 .ep-description{
     margin-top: 0px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
     text-indent: 50px;
 }
 
@@ -52,9 +53,9 @@
 }
 
 .ep-popularity{
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .ep-air-date{
-    margin-right: 5px;
+    margin-right: 10px;
 }
