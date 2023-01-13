@@ -7,8 +7,8 @@ const lennyButtonImg = require('../../images/lenny.png')
 const RankInterface = ({ updateRating }) => {
 
     const handleChange = event => {
-        // console.log("You selected: ", event.target.name)
-        // updateRating(4, event.target.name)
+        console.log("You selected rating: ", event.target.name)
+        updateRating(event.target.name)
     }
 
     return (

@@ -34,17 +34,19 @@ class App extends Component {
   }
 
   //remove when done experiementing
-  // componentDidUpdate = () => {
-  //   console.log('you working?: ', this.state.currentEpisode)
-  // }
+  componentDidUpdate = () => {
+    console.log("Episode after rating: ", this.state.currentEpisode)
+  }
 
-  updateRating = (id, rating) => {
-    const foundEpisode = this.state.episodes.find(episode => {
-      return episode.id === id
-    })
-    foundEpisode.myRating = rating
+  updateRating = (rating) => {
+    // const foundEpisode = this.state.episodes.find(episode => {
+    //   return episode.id === id
+    // })
+    // foundEpisode.myRating = rating
 
-    console.log("after: ", this.state.episodes)
+    this.setState({currentEpisode: {...this.state.currentEpisode, myRating: rating}})
+    // this.state.currentEpisode.myRating = rating
+    // console.log("Episode after rating: ", this.state.currentEpisode)
   }
 
   setCurrentEpisode = (id) => {

@@ -8,17 +8,6 @@ const tvImg = require('../../images/tv.png')
 const turnBackImg = require('../../images/turn-back.png')
 
 const EpisodeDetail = ({ currentEpisode }) => {
-
-    //FINDS ID AND EPISODE
-    // let id = parseInt(useParams().id);
-    // console.log("You entered: ", id)
-    // const foundEpisode = episodes.find(episode => {
-    //     return episode.id === id
-    // })
-    // console.log("Found Episode: ", foundEpisode)
-
-    // const foundEpisode = episodes[0]
-
     return (
         <div className='episode-details-and-button-container'>
             <NavLink to={`/`}>
