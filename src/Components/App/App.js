@@ -38,6 +38,7 @@ class App extends Component {
     console.log("THIS STATE: ", this.state)
   }
 
+  //DONT FORGET TO REMOVE EPISODE ONCE YOU RATE IT
   updateRating = (rating) => {
     const myEpisode = this.state.currentEpisode
     myEpisode.myRating = rating
@@ -78,7 +79,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' render={() => {
             return <div>
-              <RankResult />
+              <RankResult krustyList={this.state.krustyList} lisaList={this.state.lisaList} lennyList={this.state.lennyList}/>
               <EpisodeBank episodes={this.state.episodes} setCurrentEpisode={this.setCurrentEpisode} />
             </div>
           }} />
