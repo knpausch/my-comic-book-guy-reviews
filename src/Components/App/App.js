@@ -17,8 +17,8 @@ class App extends Component {
       episodes: [],
       currentEpisode: {},
       krustyList: [],
-      LisaList: [],
-      LennyList: []
+      lisaList: [],
+      lennyList: []
     }
   }
 
@@ -35,18 +35,25 @@ class App extends Component {
 
   //remove when done experiementing
   componentDidUpdate = () => {
-    console.log("Episode after rating: ", this.state.currentEpisode)
+    console.log("After rating...")
+    console.log('Current Episode: ', this.state.currentEpisode)
+    console.log("Krusty:", this.state.krustyList)
+    console.log("Lisa:", this.state.lisaList)
+    console.log("Lenny:", this.state.lennyList)
+
   }
 
   updateRating = (rating) => {
-    // const foundEpisode = this.state.episodes.find(episode => {
-    //   return episode.id === id
-    // })
-    // foundEpisode.myRating = rating
-
     this.setState({currentEpisode: {...this.state.currentEpisode, myRating: rating}})
-    // this.state.currentEpisode.myRating = rating
-    // console.log("Episode after rating: ", this.state.currentEpisode)
+    if(rating === 'krusty'){
+      this.setState({krustyList: [...this.state.krustyList, this.state.currentEpisode]})
+    }
+    else if(rating === 'lisa'){
+      this.setState({lisaList: [...this.state.lisaList, this.state.currentEpisode]})
+    }
+    else if(rating === 'lenny'){
+      this.setState({lennyList: [...this.state.lennyList, this.state.currentEpisode]})
+    }
   }
 
   setCurrentEpisode = (id) => {
@@ -65,7 +72,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' render={() => {
             return <div>
-              <RankResult krustyList={this.state.krustyList} />
+              <RankResult />
               <EpisodeBank episodes={this.state.episodes} setCurrentEpisode={this.setCurrentEpisode}/>
             </div>
           }} />
