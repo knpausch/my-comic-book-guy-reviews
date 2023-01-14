@@ -35,14 +35,7 @@ class App extends Component {
 
   //remove when done experiementing
   componentDidUpdate = () => {
-    // console.log("After rating...")
-    // console.log('Current Episode: ', this.state.currentEpisode)
-    // console.log("Krusty:", this.state.krustyList)
-    // console.log("Lisa:", this.state.lisaList)
-    // console.log("Lenny:", this.state.lennyList)
-
     console.log("THIS STATE: ", this.state)
-
   }
 
   updateRating = (rating) => {
