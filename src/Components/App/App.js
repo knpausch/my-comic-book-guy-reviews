@@ -34,41 +34,45 @@ class App extends Component {
   }
 
   //remove when done experiementing
-  componentDidUpdate = () => {
-    console.log("THIS STATE: ", this.state)
-  }
+  // componentDidUpdate = () => {
+  //   console.log("THIS STATE: ", this.state)
+  // }
 
-  //DONT FORGET TO REMOVE EPISODE ONCE YOU RATE IT
   updateRating = (rating) => {
     const myEpisode = this.state.currentEpisode
     myEpisode.myRating = rating
 
+    const filteredList = this.state.episodes.filter(episode => {
+      return episode.id !== this.state.currentEpisode.id
+    })
+
     if (rating === 'krusty') {
       this.setState({
         currentEpisode: myEpisode,
-        krustyList: [...this.state.krustyList, this.state.currentEpisode]
+        krustyList: [...this.state.krustyList, this.state.currentEpisode],
+        episodes: filteredList
       })
     }
     else if (rating === 'lisa') {
       this.setState({
         currentEpisode: myEpisode,
-        lisaList: [...this.state.lisaList, this.state.currentEpisode]
+        lisaList: [...this.state.lisaList, this.state.currentEpisode],
+        episodes: filteredList
       })
     }
     else if (rating === 'lenny') {
       this.setState({ 
         currentEpisode: myEpisode,
-        lennyList: [...this.state.lennyList, this.state.currentEpisode] 
+        lennyList: [...this.state.lennyList, this.state.currentEpisode],
+        episodes: filteredList 
       })
     }
   }
 
   setCurrentEpisode = (id) => {
-    console.log("Episode id selected: ", id)
     const foundEpisode = this.state.episodes.find(episode => {
       return episode.id === id
     })
-    console.log("Episode selected: ", foundEpisode)
     this.setState({ currentEpisode: foundEpisode })
   }
 

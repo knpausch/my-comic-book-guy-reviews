@@ -4,14 +4,16 @@ const krustyImg = require('../../images/krusty.png')
 
 const KrustyReviews = ({ krustyList }) => {
     const krustyEpisodes = krustyList.map(episode => {
-        return(
-            <img src={episode.img} className='krusty-thumbnail' />
+        return (
+            <img src={episode.img} className='mini-thumbnail' />
         )
     })
     return (
-        <div className='krusty review'>
+        <div className='krusty review' id="krusty-review-container">
             <img src={krustyImg} className='home-krusty-img' />
-            {krustyEpisodes}
+            <div className="mini-krusty-container">
+                {krustyEpisodes}
+            </div>
         </div>
     )
 }
