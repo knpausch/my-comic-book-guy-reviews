@@ -35,34 +35,47 @@ class App extends Component {
 
   //remove when done experiementing
   componentDidUpdate = () => {
-    console.log("After rating...")
-    console.log('Current Episode: ', this.state.currentEpisode)
-    console.log("Krusty:", this.state.krustyList)
-    console.log("Lisa:", this.state.lisaList)
-    console.log("Lenny:", this.state.lennyList)
+    // console.log("After rating...")
+    // console.log('Current Episode: ', this.state.currentEpisode)
+    // console.log("Krusty:", this.state.krustyList)
+    // console.log("Lisa:", this.state.lisaList)
+    // console.log("Lenny:", this.state.lennyList)
+
+    console.log("THIS STATE: ", this.state)
 
   }
 
   updateRating = (rating) => {
-    this.setState({currentEpisode: {...this.state.currentEpisode, myRating: rating}})
-    if(rating === 'krusty'){
-      this.setState({krustyList: [...this.state.krustyList, this.state.currentEpisode]})
+    const myEpisode = this.state.currentEpisode
+    myEpisode.myRating = rating
+
+    if (rating === 'krusty') {
+      this.setState({
+        currentEpisode: myEpisode,
+        krustyList: [...this.state.krustyList, this.state.currentEpisode]
+      })
     }
-    else if(rating === 'lisa'){
-      this.setState({lisaList: [...this.state.lisaList, this.state.currentEpisode]})
+    else if (rating === 'lisa') {
+      this.setState({
+        currentEpisode: myEpisode,
+        lisaList: [...this.state.lisaList, this.state.currentEpisode]
+      })
     }
-    else if(rating === 'lenny'){
-      this.setState({lennyList: [...this.state.lennyList, this.state.currentEpisode]})
+    else if (rating === 'lenny') {
+      this.setState({ 
+        currentEpisode: myEpisode,
+        lennyList: [...this.state.lennyList, this.state.currentEpisode] 
+      })
     }
   }
 
   setCurrentEpisode = (id) => {
     console.log("Episode id selected: ", id)
-      const foundEpisode = this.state.episodes.find(episode => {
-        return episode.id === id
+    const foundEpisode = this.state.episodes.find(episode => {
+      return episode.id === id
     })
     console.log("Episode selected: ", foundEpisode)
-    this.setState({currentEpisode: foundEpisode})
+    this.setState({ currentEpisode: foundEpisode })
   }
 
   render() {
@@ -73,7 +86,7 @@ class App extends Component {
           <Route exact path='/' render={() => {
             return <div>
               <RankResult />
-              <EpisodeBank episodes={this.state.episodes} setCurrentEpisode={this.setCurrentEpisode}/>
+              <EpisodeBank episodes={this.state.episodes} setCurrentEpisode={this.setCurrentEpisode} />
             </div>
           }} />
           <Route exact path="/episodeDetails/:id" render={() => {
