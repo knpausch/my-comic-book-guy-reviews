@@ -14,7 +14,11 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      episodes: []
+      episodes: [],
+      currentEpisode: {},
+      krustyList: [],
+      lisaList: [],
+      lennyList: []
     }
   }
 
@@ -29,6 +33,49 @@ class App extends Component {
     this.getData()
   }
 
+  //remove when done experiementing
+  // componentDidUpdate = () => {
+  //   console.log("THIS STATE: ", this.state)
+  // }
+
+  updateRating = (rating) => {
+    const myEpisode = this.state.currentEpisode
+    myEpisode.myRating = rating
+
+    const filteredList = this.state.episodes.filter(episode => {
+      return episode.id !== this.state.currentEpisode.id
+    })
+
+    if (rating === 'krusty') {
+      this.setState({
+        currentEpisode: myEpisode,
+        krustyList: [...this.state.krustyList, this.state.currentEpisode],
+        episodes: filteredList
+      })
+    }
+    else if (rating === 'lisa') {
+      this.setState({
+        currentEpisode: myEpisode,
+        lisaList: [...this.state.lisaList, this.state.currentEpisode],
+        episodes: filteredList
+      })
+    }
+    else if (rating === 'lenny') {
+      this.setState({ 
+        currentEpisode: myEpisode,
+        lennyList: [...this.state.lennyList, this.state.currentEpisode],
+        episodes: filteredList 
+      })
+    }
+  }
+
+  setCurrentEpisode = (id) => {
+    const foundEpisode = this.state.episodes.find(episode => {
+      return episode.id === id
+    })
+    this.setState({ currentEpisode: foundEpisode })
+  }
+
   render() {
     return (
       <main className="app">
@@ -36,14 +83,14 @@ class App extends Component {
         <Switch>
           <Route exact path='/' render={() => {
             return <div>
-              <RankResult />
-              <EpisodeBank episodes={this.state.episodes}/>
+              <RankResult krustyList={this.state.krustyList} lisaList={this.state.lisaList} lennyList={this.state.lennyList}/>
+              <EpisodeBank episodes={this.state.episodes} setCurrentEpisode={this.setCurrentEpisode} />
             </div>
           }} />
           <Route exact path="/episodeDetails/:id" render={() => {
             return <div>
-              <EpisodeDetail episodes={this.state.episodes}/>
-              <RankInterface />
+              <EpisodeDetail currentEpisode={this.state.currentEpisode} />
+              <RankInterface updateRating={this.updateRating} />
             </div>
           }} />
         </Switch>

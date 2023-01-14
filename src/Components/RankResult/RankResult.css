@@ -1,8 +1,7 @@
 .rank-result-container{
     display: flex;
     justify-content: center;
-    /* justify-content: space-between; */
-    margin-top: 5vh;
+    margin-top: 6.5vh;
 }
 
 .review{

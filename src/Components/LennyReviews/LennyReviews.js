@@ -2,10 +2,18 @@ import React from "react";
 import './LennyReviews.css'
 const lennyImg = require('../../images/lenny.png')
 
-const LennyReviews = () => {
-    return(
-        <div className='lenny review'>
-            <img src={lennyImg} className='home-lenny-img'/>
+const LennyReviews = ({ lennyList }) => {
+    const lennyEpisodes = lennyList.map(episode => {
+        return (
+            <img src={episode.img} className='mini-thumbnail' />
+        )
+    })
+    return (
+        <div className='lenny review' id='lenny-review-container'>
+            <img src={lennyImg} className='home-lenny-img' />
+            <div className="mini-lenny-container">
+                {lennyEpisodes}
+            </div>
         </div>
     )
 }

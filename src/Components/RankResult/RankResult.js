@@ -4,12 +4,12 @@ import KrustyReviews from "../KrustyReviews/KrustyReviews";
 import LisaReviews from "../LisaReviews/LisaReviews";
 import LennyReviews from "../LennyReviews/LennyReviews";
 
-const RankResult = () => {
+const RankResult = ({krustyList, lisaList, lennyList}) => {
     return(
         <div className='rank-result-container'>
-            <KrustyReviews />
-            <LisaReviews />
-            <LennyReviews />
+            <KrustyReviews krustyList={krustyList}/>
+            <LisaReviews lisaList={lisaList}/>
+            <LennyReviews lennyList={lennyList}/>
         </div>
     )
 }

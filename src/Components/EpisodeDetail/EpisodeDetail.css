@@ -15,6 +15,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 5px;
+    cursor: pointer;
 }
 
 .episode-details-container{

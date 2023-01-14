@@ -12,7 +12,7 @@ export const cleanData = (data) => {
         episodeData.episodeNum = episode.episode
         episodeData.id = episode.id
         episodeData.key = episode.id
-        episodeData.myRating = 0
+        episodeData.myRating = ""
         episodeData.name = episode.name
         episodeData.popularityRating = episode.rating
         episodeData.season = episode.season
@@ -20,5 +20,7 @@ export const cleanData = (data) => {
 
         scrubbedData.push(episodeData)
     })
+    scrubbedData[1].img='https://i.imgur.com/TbBkCq6.jpeg'
+    scrubbedData[90].img='https://i.imgur.com/JWnAAwT.jpeg'
     return scrubbedData
 }
