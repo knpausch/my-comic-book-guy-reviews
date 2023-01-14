@@ -1,6 +1,32 @@
+#lisa-review-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .home-lisa-img{
     width: 10vh;
-    position: relative;
-    left: 40%;
-    bottom: 15%;
+    position: absolute;
+    left: 35%;
+    bottom: 85%;
+}
+
+.mini-lisa-container{
+    max-height: 100%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2px;
+    height: 95%;
+}
+
+.mini-thumbnail{
+    width: 90%;
+    border-style: solid;
+    border-color: white;
+    border-width: 4px;
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: 6px;
 }
