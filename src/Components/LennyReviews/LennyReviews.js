@@ -4,14 +4,16 @@ const lennyImg = require('../../images/lenny.png')
 
 const LennyReviews = ({ lennyList }) => {
     const lennyEpisodes = lennyList.map(episode => {
-        return(
-            <img src={episode.img} className='mini-thumbnail'/>
+        return (
+            <img src={episode.img} className='mini-thumbnail' />
         )
     })
     return (
-        <div className='lenny review'>
+        <div className='lenny review' id='lenny-review-container'>
             <img src={lennyImg} className='home-lenny-img' />
-            {lennyEpisodes}
+            <div className="mini-lenny-container">
+                {lennyEpisodes}
+            </div>
         </div>
     )
 }
