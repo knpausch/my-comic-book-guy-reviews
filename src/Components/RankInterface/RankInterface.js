@@ -22,21 +22,21 @@ const RankInterface = ({ updateRating }) => {
 
                 <div className='button-container'>
                     <NavLink to={`/`}>
-                        <button className='rank-button'><img src={krustyButtonImg} name='krusty' className='rank-img' onClick={event => { handleChange(event) }} /></button>
+                        <button className='rank-button' id='krusty-button'><img src={krustyButtonImg} name='krusty' className='rank-img' onClick={event => { handleChange(event) }} /></button>
                     </NavLink>
                     <h3 className="button-text">"What the hell was that?"</h3>
                 </div>
                 <div className='button-container'>
                     <NavLink to={`/`}>
-                        <button className='rank-button'><img src={lisaButtonImg} name='lisa' className='rank-img' onClick={event => { handleChange(event) }} /></button>
+                        <button className='rank-button' id='lisa-button'><img src={lisaButtonImg} name='lisa' className='rank-img' onClick={event => { handleChange(event) }} /></button>
                     </NavLink>
                     <h3 className="button-text">"Meh"</h3>
                 </div>
                 <div className='button-container'>
                     <NavLink to={`/`}>
-                        <button className='rank-button'><img src={lennyButtonImg} name='lenny' className='rank-img' onClick={event => { handleChange(event) }} /></button>
+                        <button className='rank-button' id='lenny-button'><img src={lennyButtonImg} name='lenny' className='rank-img' onClick={event => { handleChange(event) }} /></button>
                     </NavLink>
-                    <h3 className="button-text">Lenny Appoved</h3>
+                    <h3 className="button-text">Lenny Approved</h3>
                 </div>
 
             </div>

@@ -20,7 +20,9 @@ export const cleanData = (data) => {
 
         scrubbedData.push(episodeData)
     })
-    scrubbedData[1].img='https://i.imgur.com/TbBkCq6.jpeg'
-    scrubbedData[90].img='https://i.imgur.com/JWnAAwT.jpeg'
+    if(scrubbedData.length > 91){
+        scrubbedData[1].img='https://i.imgur.com/TbBkCq6.jpeg'
+        scrubbedData[90].img='https://i.imgur.com/JWnAAwT.jpeg'
+    }
     return scrubbedData
 }
