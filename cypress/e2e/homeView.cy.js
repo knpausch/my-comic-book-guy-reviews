@@ -2,7 +2,7 @@ describe("Home view page flow", () => {
     beforeEach(() => {
         cy.intercept('https://api.sampleapis.com/simpsons/episodes', {
             method: 'GET',
-            fixture: '../fixtures/try1.json'
+            fixture: '../fixtures/getEpisodes.json'
         })
 
         cy.visit("http://localhost:3000/")
