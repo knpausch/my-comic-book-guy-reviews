@@ -9,6 +9,8 @@
     font-size: 150%;
     text-align: center;
     width: 100%;
+    padding-left: 2vh;
+    padding-right: 2vh;
 }
 
 .my-review-container {
@@ -18,7 +20,6 @@
     background-color: #F0F0F0;
     position: relative;
     top: 30px;
-    width: 20vw;
     height: 5vh;
     border-radius: 40px;
     border-style: solid;
@@ -33,7 +34,6 @@
     border-radius: 20px;
     width: 70vw;
     display: flex;
-    align-items: center;
     justify-content: center;
     justify-content: space-evenly;
 }
@@ -52,9 +52,10 @@
 .button-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-top: 30px;
     margin-bottom: 5px;
+    width: 30%;
+    text-align: center;
 }
 
 .button-text {

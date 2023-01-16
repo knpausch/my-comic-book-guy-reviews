@@ -12,7 +12,21 @@
     margin-top: 5vh;
 }
 
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 80em) {
+    .bank-container{
+        grid-template-columns: repeat(5, 1fr);
+        margin-bottom: 6.5vh;
+    }
+}
+
+@media screen and (max-width: 70em) {
+    .bank-container{
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 6.5vh;
+    }
+}
+
+@media screen and (max-width: 60em) {
     .bank-container{
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 6.5vh;
