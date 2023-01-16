@@ -1,10 +1,10 @@
-.rank-result-container{
+.rank-result-container {
     display: flex;
     justify-content: center;
     margin-top: 6.5vh;
 }
 
-.review{
+.review {
     border-style: solid;
     border-width: 4px;
     border-color: #1E2430;
@@ -13,4 +13,12 @@
     height: 30vh;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+@media screen and (max-width: 50em) {
+    .rank-result-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

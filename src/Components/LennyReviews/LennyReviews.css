@@ -34,3 +34,18 @@
     margin-left: 2px;
     border-radius: 6px;
 }
+
+@media screen and (max-width: 50em) {
+    #lenny-review-container{
+        width: 100%;
+        margin-top: 6.5vh;
+    }
+
+    .home-lenny-img{
+        left: 42%;
+    }
+
+    .mini-lenny-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

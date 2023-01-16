@@ -11,3 +11,10 @@
     grid-template-columns: repeat(6, 1fr);
     margin-top: 5vh;
 }
+
+@media screen and (max-width: 50em) {
+    .bank-container{
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 6.5vh;
+    }
+}

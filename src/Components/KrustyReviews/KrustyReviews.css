@@ -34,3 +34,17 @@
     margin-left: 2px;
     border-radius: 6px;
 }
+
+@media screen and (max-width: 50em) {
+    #krusty-review-container{
+        width: 100%;
+    }
+
+    .home-krusty-img{
+        left: 42%;
+    }
+
+    .mini-krusty-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
