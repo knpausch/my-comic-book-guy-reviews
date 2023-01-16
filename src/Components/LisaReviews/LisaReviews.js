@@ -1,5 +1,7 @@
 import React from "react";
 import './LisaReviews.css'
+import PropTypes from 'prop-types'
+
 const lisaImg = require('../../images/lisa.png')
 
 const LisaReviews = ({ lisaList }) => {
@@ -19,3 +21,7 @@ const LisaReviews = ({ lisaList }) => {
 }
 
 export default LisaReviews
+
+LisaReviews.propTypes = {
+    lisaList: PropTypes.array.isRequired
+}
