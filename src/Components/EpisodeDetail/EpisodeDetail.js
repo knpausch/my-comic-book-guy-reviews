@@ -1,11 +1,10 @@
 import React from "react";
 import './EpisodeDetail.css'
 import EpisodeSheet from "../EpisodeSheet/EpisodeSheet";
-import { useParams } from 'react-router-dom';
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 const tvImg = require('../../images/tv.png')
-const turnBackImg = require('../../images/turn-back.png')
 
 const EpisodeDetail = ({ currentEpisode }) => {
     return (
@@ -35,3 +34,7 @@ const EpisodeDetail = ({ currentEpisode }) => {
 }
 
 export default EpisodeDetail
+
+EpisodeDetail.propTypes = {
+    currentEpisode: PropTypes.object.isRequired
+}
