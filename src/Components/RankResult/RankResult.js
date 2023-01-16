@@ -6,6 +6,8 @@ import LennyReviews from "../LennyReviews/LennyReviews";
 import PropTypes from 'prop-types'
 
 const RankResult = ({krustyList, lisaList, lennyList}) => {
+    window.scrollTo(0,0);
+
     return(
         <div className='rank-result-container'>
             <KrustyReviews krustyList={krustyList}/>

@@ -2,8 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-between; */
     background-color: #FEC356;
     height: 100vh;
     width: 100vw;
+}
+
+@media screen and (max-width: 50em) {
+    .app{
+        height: fit-content;
+    }
 }
