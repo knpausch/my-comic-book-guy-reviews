@@ -1,6 +1,7 @@
 import React from "react";
 import './RankInterface.css'
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 const krustyButtonImg = require('../../images/krusty.png')
 const lisaButtonImg = require('../../images/lisa.png')
@@ -45,3 +46,7 @@ const RankInterface = ({ updateRating }) => {
 }
 
 export default RankInterface
+
+RankInterface.propTypes = {
+    updateRating: PropTypes.func.isRequired
+}
