@@ -6,6 +6,7 @@ import RankResult from "../RankResult/RankResult";
 import EpisodeBank from "../EpisodeBank/EpisodeBank";
 import EpisodeDetail from "../EpisodeDetail/EpisodeDetail";
 import RankInterface from "../RankInterface/RankInterface";
+import PageNotFound from "../PageNotFound/PageNotFound";
 import { Route, Switch } from 'react-router-dom'
 import { response } from "../../apiCalls";
 import { cleanData } from "../../cleanData";
@@ -61,10 +62,10 @@ class App extends Component {
       })
     }
     else if (rating === 'lenny') {
-      this.setState({ 
+      this.setState({
         currentEpisode: myEpisode,
         lennyList: [...this.state.lennyList, this.state.currentEpisode],
-        episodes: filteredList 
+        episodes: filteredList
       })
     }
   }
@@ -83,7 +84,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' render={() => {
             return <div>
-              <RankResult krustyList={this.state.krustyList} lisaList={this.state.lisaList} lennyList={this.state.lennyList}/>
+              <RankResult krustyList={this.state.krustyList} lisaList={this.state.lisaList} lennyList={this.state.lennyList} />
               <EpisodeBank episodes={this.state.episodes} setCurrentEpisode={this.setCurrentEpisode} />
             </div>
           }} />
@@ -93,6 +94,7 @@ class App extends Component {
               <RankInterface updateRating={this.updateRating} />
             </div>
           }} />
+          <Route component={PageNotFound} />
         </Switch>
       </main>
     )
