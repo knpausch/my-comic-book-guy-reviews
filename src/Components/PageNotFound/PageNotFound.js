@@ -7,7 +7,7 @@ const sadHomerImg = require('../../images/sad-homer.png')
 const PageNotFound = () => {
     return (
         <div className='message-container'>
-            <h2>D'oh! URL not found. Please try again.</h2>
+            <h2>D'oh! URL not found</h2>
             <NavLink to='/'>
                 <button className="redirect-button">Go Back Home</button>
             </NavLink>
