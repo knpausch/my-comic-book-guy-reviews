@@ -1,5 +1,5 @@
 describe("Error handling for 404 & 500 Error", () => {
-    it("Should display message and button if user enter bad URL", () => {
+    it("Should display error message and redirect button if user enters a bad URL", () => {
         cy.intercept('https://api.sampleapis.com/simpsons/episodes', {
             method: 'GET',
             fixture: '../fixtures/getEpisodes.json'
@@ -32,4 +32,30 @@ describe("Error handling for 404 & 500 Error", () => {
         cy.get('.thumbnail-img').eq(2).should('have.attr', 'src', 'https://images-na.ssl-images-amazon.com/images/M/MV5BNzMwODQzMTQ4N15BMl5BanBnXkFtZTgwODU1NjQ2MjE@._V1_UX200_CR0,0,200,112_AL_.jpg')
         cy.get('.thumbnail-img').eq(3).should('have.attr', 'src', 'https://images-na.ssl-images-amazon.com/images/M/MV5BNjkzMjAzMzc4NF5BMl5BanBnXkFtZTgwNDY2NTQ2MjE@._V1_UX200_CR0,0,200,112_AL_.jpg')
     })
+
+    it("Should display error message if API server went down while user is on home page", () => {
+        cy.intercept('https://api.sampleapis.com/simpsons/episodes', {
+            method: 'GET',
+            statusCode: 500
+        })
+
+        cy.visit("http://localhost:3000/")
+
+        cy.get('.banner-img').should('be.visible')
+        cy.get('.server-down-text').should('contain', 'D\'oh! Something went wrong. Please try again later')
+        cy.get('.sad-homer-img').should('have.attr', 'src', '/static/media/sad-homer.65f7e167de109219d207.png')
+    })
+
+    // it.only("Should display error message if API server went down while user is on home page", () => {
+    //     cy.intercept('https://api.sampleapis.com/simpsons/episodes', {
+    //         method: 'GET',
+    //         statusCode: 500
+    //     })
+
+    //     cy.visit("http://localhost:3000/")
+
+    //     cy.get('.banner-img').should('be.visible')
+    //     cy.get('.server-down-text').should('contain', 'D\'oh! Something went wrong. Please try again later')
+    //     cy.get('.sad-homer-img').should('have.attr', 'src', '/static/media/sad-homer.65f7e167de109219d207.png')
+    // })
 })
