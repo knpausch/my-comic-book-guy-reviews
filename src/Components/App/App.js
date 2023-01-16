@@ -27,10 +27,7 @@ class App extends Component {
 
   getData = () => {
     response
-      .then(data => {
-        this.setState({ episodes: cleanData(data) })
-        return
-      })
+      .then(data => this.setState({ episodes: cleanData(data) }))
       .catch(error => this.setState({ errorMessage: "D'oh! Something went wrong. Please try again later" }))
   }
 
