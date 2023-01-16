@@ -1,6 +1,7 @@
 import React from "react";
 import './RankInterface.css'
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 const krustyButtonImg = require('../../images/krusty.png')
 const lisaButtonImg = require('../../images/lisa.png')
@@ -19,7 +20,6 @@ const RankInterface = ({ updateRating }) => {
                 <h3 className="my-review-text">My Review:</h3>
             </div>
             <div className="button-ui">
-
                 <div className='button-container'>
                     <NavLink to={`/`}>
                         <button className='rank-button' id='krusty-button'><img src={krustyButtonImg} name='krusty' className='rank-img' onClick={event => { handleChange(event) }} /></button>
@@ -38,10 +38,13 @@ const RankInterface = ({ updateRating }) => {
                     </NavLink>
                     <h3 className="button-text">Lenny Approved</h3>
                 </div>
-
             </div>
         </div>
     )
 }
 
 export default RankInterface
+
+RankInterface.propTypes = {
+    updateRating: PropTypes.func.isRequired
+}

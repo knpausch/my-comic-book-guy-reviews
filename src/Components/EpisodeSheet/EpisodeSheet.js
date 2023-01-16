@@ -1,7 +1,9 @@
 import React from "react";
 import './EpisodeSheet.css'
+import PropTypes from 'prop-types'
 
-const EpisodeSheet = ({ airDate, description, episodeNum, id, name, popularityRating, season, img }) => {
+
+const EpisodeSheet = ({ airDate, description, episodeNum, name, popularityRating, season }) => {
     return (
         <div className='episode-sheet'>
             <h1 className="ep-name">{name}</h1>
@@ -21,3 +23,12 @@ const EpisodeSheet = ({ airDate, description, episodeNum, id, name, popularityRa
 }
 
 export default EpisodeSheet
+
+EpisodeSheet.propTypes = {
+    airDate: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    episodeNum: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    popularityRating: PropTypes.number.isRequired,
+    season: PropTypes.number.isRequired
+}

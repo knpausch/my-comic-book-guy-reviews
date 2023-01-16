@@ -1,11 +1,10 @@
 import React from "react";
 import './EpisodeDetail.css'
 import EpisodeSheet from "../EpisodeSheet/EpisodeSheet";
-import { useParams } from 'react-router-dom';
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 const tvImg = require('../../images/tv.png')
-const turnBackImg = require('../../images/turn-back.png')
 
 const EpisodeDetail = ({ currentEpisode }) => {
     return (
@@ -18,12 +17,10 @@ const EpisodeDetail = ({ currentEpisode }) => {
                     airDate={currentEpisode.airDate}
                     description={currentEpisode.description}
                     episodeNum={currentEpisode.episodeNum}
-                    id={currentEpisode.id}
                     key={currentEpisode.key}
                     name={currentEpisode.name}
                     popularityRating={currentEpisode.popularityRating}
                     season={currentEpisode.season}
-                    img={currentEpisode.img}
                 />
                 <div className="img-overlay-container">
                     <img src={currentEpisode.img} className='episode-img' />
@@ -35,3 +32,7 @@ const EpisodeDetail = ({ currentEpisode }) => {
 }
 
 export default EpisodeDetail
+
+EpisodeDetail.propTypes = {
+    currentEpisode: PropTypes.object.isRequired
+}

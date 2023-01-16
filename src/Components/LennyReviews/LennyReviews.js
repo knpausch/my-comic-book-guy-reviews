@@ -1,11 +1,13 @@
 import React from "react";
 import './LennyReviews.css'
+import PropTypes, { array } from 'prop-types'
+
 const lennyImg = require('../../images/lenny.png')
 
 const LennyReviews = ({ lennyList }) => {
     const lennyEpisodes = lennyList.map(episode => {
         return (
-            <img src={episode.img} className='mini-thumbnail' />
+            <img src={episode.img} key={episode.key} className='mini-thumbnail' />
         )
     })
     return (
@@ -19,3 +21,7 @@ const LennyReviews = ({ lennyList }) => {
 }
 
 export default LennyReviews
+
+LennyReviews.propTypes = {
+    lennyList: PropTypes.array.isRequired
+}

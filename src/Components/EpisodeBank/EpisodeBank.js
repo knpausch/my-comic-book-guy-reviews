@@ -2,6 +2,7 @@ import React from "react";
 import './EpisodeBank.css'
 import EpisodeThumbnail from "../EpisodeThumbnail/EpisodeThumbnail";
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 const EpisodeBank = ({ episodes, setCurrentEpisode }) => {
     const episodeImgs = episodes.map(episode => {
@@ -23,3 +24,8 @@ const EpisodeBank = ({ episodes, setCurrentEpisode }) => {
 }
 
 export default EpisodeBank
+
+EpisodeBank.propTypes = {
+    episodes: PropTypes.array.isRequired,
+    setCurrentEpisode: PropTypes.func.isRequired
+}

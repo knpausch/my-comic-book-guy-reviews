@@ -3,6 +3,7 @@ import './RankResult.css'
 import KrustyReviews from "../KrustyReviews/KrustyReviews";
 import LisaReviews from "../LisaReviews/LisaReviews";
 import LennyReviews from "../LennyReviews/LennyReviews";
+import PropTypes from 'prop-types'
 
 const RankResult = ({krustyList, lisaList, lennyList}) => {
     return(
@@ -15,3 +16,9 @@ const RankResult = ({krustyList, lisaList, lennyList}) => {
 }
 
 export default RankResult
+
+RankResult.propTypes = {
+    krustyList: PropTypes.array.isRequired,
+    lisaList: PropTypes.array.isRequired,
+    lennyList: PropTypes.array.isRequired
+}

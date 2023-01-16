@@ -1,11 +1,13 @@
 import React from "react";
 import './KrustyReviews.css'
+import PropTypes from 'prop-types'
+
 const krustyImg = require('../../images/krusty.png')
 
 const KrustyReviews = ({ krustyList }) => {
     const krustyEpisodes = krustyList.map(episode => {
         return (
-            <img src={episode.img} className='mini-thumbnail' />
+            <img src={episode.img} key={episode.key} className='mini-thumbnail' />
         )
     })
     return (
@@ -19,3 +21,7 @@ const KrustyReviews = ({ krustyList }) => {
 }
 
 export default KrustyReviews
+
+KrustyReviews.propTypes = {
+    krustyList: PropTypes.array.isRequired
+}
