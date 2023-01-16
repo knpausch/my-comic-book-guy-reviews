@@ -1,5 +1,7 @@
 import React from "react";
 import './LennyReviews.css'
+import PropTypes, { array } from 'prop-types'
+
 const lennyImg = require('../../images/lenny.png')
 
 const LennyReviews = ({ lennyList }) => {
@@ -19,3 +21,7 @@ const LennyReviews = ({ lennyList }) => {
 }
 
 export default LennyReviews
+
+LennyReviews.propTypes = {
+    lennyList: PropTypes.array.isRequired
+}
