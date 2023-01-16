@@ -5,7 +5,7 @@ const lisaImg = require('../../images/lisa.png')
 const LisaReviews = ({ lisaList }) => {
     const lisaEpisodes = lisaList.map(episode => {
         return (
-            <img src={episode.img} className='mini-thumbnail' />
+            <img src={episode.img} key={episode.key} className='mini-thumbnail' />
         )
     })
     return (
