@@ -17,12 +17,10 @@ const EpisodeDetail = ({ currentEpisode }) => {
                     airDate={currentEpisode.airDate}
                     description={currentEpisode.description}
                     episodeNum={currentEpisode.episodeNum}
-                    id={currentEpisode.id}
                     key={currentEpisode.key}
                     name={currentEpisode.name}
                     popularityRating={currentEpisode.popularityRating}
                     season={currentEpisode.season}
-                    img={currentEpisode.img}
                 />
                 <div className="img-overlay-container">
                     <img src={currentEpisode.img} className='episode-img' />
