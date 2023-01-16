@@ -20,7 +20,6 @@ const RankInterface = ({ updateRating }) => {
                 <h3 className="my-review-text">My Review:</h3>
             </div>
             <div className="button-ui">
-
                 <div className='button-container'>
                     <NavLink to={`/`}>
                         <button className='rank-button' id='krusty-button'><img src={krustyButtonImg} name='krusty' className='rank-img' onClick={event => { handleChange(event) }} /></button>
@@ -39,7 +38,6 @@ const RankInterface = ({ updateRating }) => {
                     </NavLink>
                     <h3 className="button-text">Lenny Approved</h3>
                 </div>
-
             </div>
         </div>
     )
