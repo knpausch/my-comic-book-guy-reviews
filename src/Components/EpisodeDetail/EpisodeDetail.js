@@ -7,6 +7,8 @@ import PropTypes from 'prop-types'
 const tvImg = require('../../images/tv.png')
 
 const EpisodeDetail = ({ currentEpisode }) => {
+    window.scrollTo(0,0);
+
     return (
         <div className='episode-details-and-button-container'>
             <NavLink to={`/`}>
