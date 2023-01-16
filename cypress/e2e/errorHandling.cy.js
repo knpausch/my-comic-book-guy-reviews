@@ -46,16 +46,16 @@ describe("Error handling for 404 & 500 Error", () => {
         cy.get('.sad-homer-img').should('have.attr', 'src', '/static/media/sad-homer.65f7e167de109219d207.png')
     })
 
-    // it.only("Should display error message if API server went down while user is on home page", () => {
-    //     cy.intercept('https://api.sampleapis.com/simpsons/episodes', {
-    //         method: 'GET',
-    //         statusCode: 500
-    //     })
+    it.only("Should display error message if API server went down while user is on detail page", () => {
+        cy.intercept('https://api.sampleapis.com/simpsons/episodes', {
+            method: 'GET',
+            statusCode: 500
+        })
 
-    //     cy.visit("http://localhost:3000/")
-
-    //     cy.get('.banner-img').should('be.visible')
-    //     cy.get('.server-down-text').should('contain', 'D\'oh! Something went wrong. Please try again later')
-    //     cy.get('.sad-homer-img').should('have.attr', 'src', '/static/media/sad-homer.65f7e167de109219d207.png')
-    // })
+        cy.visit("http://localhost:3000/episodeDetails/1")
+        
+        cy.get('.banner-img').should('be.visible')
+        cy.get('.server-down-text').should('contain', 'D\'oh! Something went wrong. Please try again later')
+        cy.get('.sad-homer-img').should('have.attr', 'src', '/static/media/sad-homer.65f7e167de109219d207.png')
+    })
 })
