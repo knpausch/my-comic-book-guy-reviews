@@ -75,7 +75,7 @@ GitHub Project Board | Figma
 
 ## Reflection
 
-- Keyanna (Kiko) Pausch: "This solo project really solidified my undrstanding of React, Router and Cypress testing. It also presented many scenarios where I could see the pros and cons of utilizing version 5 as oppose to version 6 of React. As much as version 5 is foundational for me, I believe I will utilize version 6 onwards with its unique features like classless-ness, hooks and useEffect. Lastly, I thoughly enjoyed the Cypress testing process and really felt comfortable intercepting/stubbing my tests for efficiency and less expensive network requests."
+- Keyanna (Kiko) Pausch: "This solo project really solidified my understanding of React, Router and Cypress testing. It also presented many scenarios where I could see the pros and cons of utilizing version 5 as opposed to version 6 of React. As much as version 5 is foundational for me, I believe I will utilize version 6 onwards with its unique features like classless-ness, hooks and useEffect. Lastly, I thoroughly enjoyed the Cypress testing process and really felt comfortable intercepting/stubbing my tests for efficiency and less expensive network requests."
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
