@@ -10,7 +10,7 @@ const LisaReviews = ({ lisaList }) => {
             <img src={episode.img} key={episode.key} className='mini-thumbnail' />
         )
     })
-    return (
+    const lisaReviews = (
         <div className='lisa review' id='lisa-review-container'>
             <img src={lisaImg} className='home-lisa-img' />
             <div className='mini-lisa-container'>
@@ -18,6 +18,7 @@ const LisaReviews = ({ lisaList }) => {
             </div>
         </div>
     )
+    return lisaReviews
 }
 
 export default LisaReviews

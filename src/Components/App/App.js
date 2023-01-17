@@ -79,18 +79,20 @@ class App extends Component {
         <Banner />
         <Switch>
           <Route exact path='/' render={() => {
-            return this.state.errorMessage ? <ServerDown errorMessage={this.state.errorMessage} /> :
+            let errorMessageOrHomeView = this.state.errorMessage ? <ServerDown errorMessage={this.state.errorMessage} /> :
               (<div>
                 <RankResult krustyList={this.state.krustyList} lisaList={this.state.lisaList} lennyList={this.state.lennyList} />
                 <EpisodeBank episodes={this.state.episodes} setCurrentEpisode={this.setCurrentEpisode} />
               </div>)
+            return errorMessageOrHomeView
           }} />
           <Route exact path='/episodeDetails/:id' render={() => {
-            return this.state.errorMessage ? <ServerDown errorMessage={this.state.errorMessage} /> :
+            let errorMessageOrEpisodeDetailView = this.state.errorMessage ? <ServerDown errorMessage={this.state.errorMessage} /> :
               (<div>
                 <EpisodeDetail currentEpisode={this.state.currentEpisode} />
                 <RankInterface updateRating={this.updateRating} />
               </div>)
+            return errorMessageOrEpisodeDetailView
           }} />
           <Route component={PageNotFound} />
         </Switch>

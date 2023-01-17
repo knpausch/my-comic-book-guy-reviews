@@ -8,7 +8,7 @@ const lisaButtonImg = require('../../images/lisa.png')
 const lennyButtonImg = require('../../images/lenny.png')
 
 const RankInterface = ({ updateRating }) => {
-    return (
+    const rankInterface = (
         <div className='rank-interface-container'>
             <div className='my-review-container'>
                 <h3 className='my-review-text'>My Review:</h3>
@@ -35,6 +35,7 @@ const RankInterface = ({ updateRating }) => {
             </div>
         </div>
     )
+    return rankInterface
 }
 
 export default RankInterface

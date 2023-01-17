@@ -10,7 +10,7 @@ const KrustyReviews = ({ krustyList }) => {
             <img src={episode.img} key={episode.key} className='mini-thumbnail' />
         )
     })
-    return (
+    const krustyReviews = (
         <div className='krusty review' id='krusty-review-container'>
             <img src={krustyImg} className='home-krusty-img' />
             <div className='mini-krusty-container'>
@@ -18,6 +18,7 @@ const KrustyReviews = ({ krustyList }) => {
             </div>
         </div>
     )
+    return krustyReviews
 }
 
 export default KrustyReviews

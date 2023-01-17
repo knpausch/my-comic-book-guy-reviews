@@ -4,11 +4,12 @@ import './Banner.css'
 const logo = require('../../images/review-banner.jpg')
 
 const Banner = () => {
-    return (
+    const banner = (
         <div className='banner-container'>
             <img src={logo} className='banner-img' />
         </div>
     )
+    return banner
 }
 
 export default Banner
