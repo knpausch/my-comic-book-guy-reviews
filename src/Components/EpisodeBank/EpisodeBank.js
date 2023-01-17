@@ -15,11 +15,13 @@ const EpisodeBank = ({ episodes, setCurrentEpisode }) => {
             </NavLink>
         )
     })
-    return (
+
+    const episodeBank = (
         <div className='bank-container'>
             {episodeImgs}
         </div>
     )
+    return episodeBank
 }
 
 export default EpisodeBank

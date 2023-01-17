@@ -5,7 +5,7 @@ import './PageNotFound.css'
 const sadHomerImg = require('../../images/sad-homer.png')
 
 const PageNotFound = () => {
-    return (
+    const pageNotFound = (
         <div className='message-container'>
             <h2 className='bad-url-text'>D'oh! URL not found</h2>
             <NavLink to='/'>
@@ -14,6 +14,7 @@ const PageNotFound = () => {
             <img src={sadHomerImg} className='sad-homer-img'/>
         </div>
     )
+    return pageNotFound
 }
 
 export default PageNotFound

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './EpisodeSheet.css'
 
 const EpisodeSheet = ({ airDate, description, episodeNum, name, popularityRating, season }) => {
-    return (
+    const episodeSheet = (
         <div className='episode-sheet'>
             <h1 className='ep-name'>{name}</h1>
             <div className='season-episode-container'>
@@ -18,6 +18,7 @@ const EpisodeSheet = ({ airDate, description, episodeNum, name, popularityRating
             </div>
         </div>
     )
+    return episodeSheet
 }
 
 export default EpisodeSheet

@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import './EpisodeThumbnail.css'
 
 const EpisodeThumbnail = ({ name, img }) => {
-    return (
+    const episodeThumbnail = (
         <div>
             <img src={img} className='thumbnail-img' alt={`Simpsons episode cover of "${name}"`} />
         </div>
     )
+    return episodeThumbnail
 }
 
 export default EpisodeThumbnail

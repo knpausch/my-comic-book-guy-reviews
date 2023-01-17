@@ -8,7 +8,7 @@ const tvImg = require('../../images/tv.png')
 
 const EpisodeDetail = ({ currentEpisode }) => {
     window.scrollTo(0, 0)
-    return (
+    const episodeDetail = (
         <div className='episode-details-and-button-container'>
             <NavLink to={`/`}>
                 <button className='go-back-button'>Home</button>
@@ -30,6 +30,7 @@ const EpisodeDetail = ({ currentEpisode }) => {
             </div>
         </div>
     )
+    return episodeDetail
 }
 
 export default EpisodeDetail

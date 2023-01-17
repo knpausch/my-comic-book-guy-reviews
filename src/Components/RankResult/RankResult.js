@@ -7,13 +7,14 @@ import './RankResult.css'
 
 const RankResult = ({ krustyList, lisaList, lennyList }) => {
     window.scrollTo(0, 0)
-    return (
+    const rankResult = (
         <div className='rank-result-container'>
             <KrustyReviews krustyList={krustyList} />
             <LisaReviews lisaList={lisaList} />
             <LennyReviews lennyList={lennyList} />
         </div>
     )
+    return rankResult
 }
 
 export default RankResult

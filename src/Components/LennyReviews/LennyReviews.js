@@ -10,7 +10,7 @@ const LennyReviews = ({ lennyList }) => {
             <img src={episode.img} key={episode.key} className='mini-thumbnail' />
         )
     })
-    return (
+    const lennyReviews = (
         <div className='lenny review' id='lenny-review-container'>
             <img src={lennyImg} className='home-lenny-img' />
             <div className='mini-lenny-container'>
@@ -18,6 +18,7 @@ const LennyReviews = ({ lennyList }) => {
             </div>
         </div>
     )
+    return lennyReviews
 }
 
 export default LennyReviews
