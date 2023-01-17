@@ -3,6 +3,10 @@
 ## Lead Contributor
 - Keyaanna (Kiko) Pausch [GitHub](https://github.com/knpausch) | [LinkedIn](https://www.linkedin.com/in/knpausch/)
 
+## Deployed Link
+
+[My Comic Book Guy Reviews](https://my-comic-book-guy-reviews.vercel.app/)
+
 ## About The Project
 
 My Comic Book Guy Review is an entertaining application that displays over 200+ Simpsons episodes from a public [API](https://sampleapis.com/api-list/simpsons) that users can rate as they binge through all seasons 1-10 of The Simpsons. The user can select any episode thumbnail from the bank to view its details which includes the episode's name, season, episode number, description, popularity rating, original air date and an image from that episode. From there, they may give it a rating of: "What the hell was that?", "Meh", or "Lenny Approved!". This will then move the episode thumbnail to its corresponding module on the home view. My Comic Book Guy Review was constructed utilizing React (v5), Router, Proptypes, media breakpoints for desktop/mobile displays, and Cypress testing. It took me approximately 50 hours total to finish within a 6-day given timeframe.
@@ -32,10 +36,6 @@ GitHub Project Board | Figma
 ## Learning Goals
 
 - Solidify React v5 & Router concepts, Media Query display for desktop/mobile devices, and Cypress Testing
-
-## Deployed Link
-
-[Board Game Bonanza](https://board-game-bonanza.vercel.app/)
 
 ## Preview
 
