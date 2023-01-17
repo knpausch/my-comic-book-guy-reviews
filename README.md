@@ -59,11 +59,11 @@ GitHub Project Board | Figma
 
 ![roughDraft](https://user-images.githubusercontent.com/19957834/212793432-713419f9-b7f5-4903-aca0-c49e1564c0c9.jpg)
 
-### Home View Figma Wireframe
+### Wireframe - Home View
 
 ![Home View](https://user-images.githubusercontent.com/19957834/212793493-7bed9013-b67d-4cf1-91e3-7ed07e7652a6.jpg)
 
-### Episode Details View Figma Wireframe
+### Wireframe - Episode Detail View
 
 ![Episode Detail View](https://user-images.githubusercontent.com/19957834/212793521-2ce8153c-c755-4da5-8833-687c0a0584a0.jpg)
 
