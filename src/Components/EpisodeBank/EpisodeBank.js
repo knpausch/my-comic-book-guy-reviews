@@ -1,14 +1,13 @@
-import React from "react";
-import './EpisodeBank.css'
-import EpisodeThumbnail from "../EpisodeThumbnail/EpisodeThumbnail";
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import EpisodeThumbnail from '../EpisodeThumbnail/EpisodeThumbnail'
+import './EpisodeBank.css'
 
 const EpisodeBank = ({ episodes, setCurrentEpisode }) => {
     const episodeImgs = episodes.map(episode => {
         return (
-            <NavLink key={episode.id} to={`/episodeDetails/${episode.id}`} onClick={() => setCurrentEpisode(episode.id)}
-            >
+            <NavLink key={episode.id} to={`/episodeDetails/${episode.id}`} onClick={() => setCurrentEpisode(episode.id)}>
                 <EpisodeThumbnail
                     name={episode.name}
                     img={episode.img}

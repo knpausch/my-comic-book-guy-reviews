@@ -1,4 +1,4 @@
-.banner-container{
+.banner-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,12 +9,13 @@
     width: 80vw;
     background-color: #388422;
 }
-.banner-img{
+
+.banner-img {
     width: 30vw;
 }
 
 @media screen and (max-width: 50em) {
-    .banner-img{
+    .banner-img {
         width: 60vw;
     }
 }

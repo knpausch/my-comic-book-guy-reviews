@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react'
 import './Banner.css'
+
 const logo = require('../../images/review-banner.jpg')
 
 const Banner = () => {
-    return(
+    return (
         <div className='banner-container'>
-            <img src={logo} className='banner-img'/>
+            <img src={logo} className='banner-img' />
         </div>
     )
 }

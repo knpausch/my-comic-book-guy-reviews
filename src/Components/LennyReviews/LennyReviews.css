@@ -1,11 +1,11 @@
-#lenny-review-container{
+#lenny-review-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.home-lenny-img{
+.home-lenny-img {
     width: 10vh;
     position: absolute;
     left: 35%;
@@ -16,7 +16,7 @@
     border-radius: 100%;
 }
 
-.mini-lenny-container{
+.mini-lenny-container {
     max-height: 100%;
     overflow: auto;
     display: grid;
@@ -25,7 +25,7 @@
     height: 95%;
 }
 
-.mini-thumbnail{
+.mini-thumbnail {
     width: 90%;
     border-style: solid;
     border-color: white;
@@ -36,16 +36,16 @@
 }
 
 @media screen and (max-width: 50em) {
-    #lenny-review-container{
+    #lenny-review-container {
         width: 100%;
         margin-top: 6.5vh;
     }
 
-    .home-lenny-img{
+    .home-lenny-img {
         left: 42%;
     }
 
-    .mini-lenny-container{
+    .mini-lenny-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }

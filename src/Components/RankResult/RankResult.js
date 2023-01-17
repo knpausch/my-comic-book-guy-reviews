@@ -1,18 +1,17 @@
-import React from "react";
-import './RankResult.css'
-import KrustyReviews from "../KrustyReviews/KrustyReviews";
-import LisaReviews from "../LisaReviews/LisaReviews";
-import LennyReviews from "../LennyReviews/LennyReviews";
+import React from 'react'
 import PropTypes from 'prop-types'
+import KrustyReviews from '../KrustyReviews/KrustyReviews'
+import LisaReviews from '../LisaReviews/LisaReviews'
+import LennyReviews from '../LennyReviews/LennyReviews'
+import './RankResult.css'
 
-const RankResult = ({krustyList, lisaList, lennyList}) => {
-    window.scrollTo(0,0);
-
-    return(
+const RankResult = ({ krustyList, lisaList, lennyList }) => {
+    window.scrollTo(0, 0)
+    return (
         <div className='rank-result-container'>
-            <KrustyReviews krustyList={krustyList}/>
-            <LisaReviews lisaList={lisaList}/>
-            <LennyReviews lennyList={lennyList}/>
+            <KrustyReviews krustyList={krustyList} />
+            <LisaReviews lisaList={lisaList} />
+            <LennyReviews lennyList={lennyList} />
         </div>
     )
 }

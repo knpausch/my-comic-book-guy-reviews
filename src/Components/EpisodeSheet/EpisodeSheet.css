@@ -1,4 +1,4 @@
-.episode-sheet{
+.episode-sheet {
     background-color: #F0F0F0;
     width: 50%;
     border-radius: 10px;
@@ -9,16 +9,16 @@
     overflow: auto;
 }
 
-.ep-name{
+.ep-name {
     text-align: center;
 }
 
-.season-episode-container{
+.season-episode-container {
     display: flex;
     justify-content: center;
 }
 
-.ep-season{
+.ep-season {
     padding: 2px;
     border-style: solid;
     border-right: 0px;
@@ -26,42 +26,42 @@
     margin-bottom: 0px;
 }
 
-.description-text{
+.description-text {
     margin-bottom: 0px;
     font-size: 25px;
     margin-left: 10px;
 }
 
-.ep-episode{
+.ep-episode {
     padding: 2px;
     border-style: solid;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
-.ep-description{
+.ep-description {
     margin-top: 0px;
     margin-left: 10px;
     margin-right: 10px;
     text-indent: 50px;
 }
 
-.popularity-air-date-container{
+.popularity-air-date-container {
     display: flex;
     justify-content: center;
     justify-content: space-between;
 }
 
-.ep-popularity{
+.ep-popularity {
     margin-left: 10px;
 }
 
-.ep-air-date{
+.ep-air-date {
     margin-right: 10px;
 }
 
 @media screen and (max-width: 50em) {
-    .episode-sheet{
+    .episode-sheet {
         width: 100%;
     }
 }
