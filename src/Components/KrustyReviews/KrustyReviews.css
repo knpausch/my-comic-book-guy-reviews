@@ -1,11 +1,11 @@
-#krusty-review-container{
+#krusty-review-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.home-krusty-img{
+.home-krusty-img {
     width: 10vh;
     position: absolute;
     left: 35%;
@@ -16,7 +16,7 @@
     border-radius: 100%;
 }
 
-.mini-krusty-container{
+.mini-krusty-container {
     max-height: 100%;
     overflow: auto;
     display: grid;
@@ -25,7 +25,7 @@
     height: 95%;
 }
 
-.mini-thumbnail{
+.mini-thumbnail {
     width: 90%;
     border-style: solid;
     border-color: white;
@@ -36,15 +36,15 @@
 }
 
 @media screen and (max-width: 50em) {
-    #krusty-review-container{
+    #krusty-review-container {
         width: 100%;
     }
 
-    .home-krusty-img{
+    .home-krusty-img {
         left: 42%;
     }
 
-    .mini-krusty-container{
+    .mini-krusty-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }

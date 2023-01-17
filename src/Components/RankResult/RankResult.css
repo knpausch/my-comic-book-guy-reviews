@@ -16,7 +16,7 @@
 }
 
 @media screen and (max-width: 50em) {
-    .rank-result-container{
+    .rank-result-container {
         display: flex;
         flex-direction: column;
         align-items: center;

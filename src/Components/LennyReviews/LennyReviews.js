@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
+import PropTypes from 'prop-types'
 import './LennyReviews.css'
-import PropTypes, { array } from 'prop-types'
 
 const lennyImg = require('../../images/lenny.png')
 
@@ -13,7 +13,7 @@ const LennyReviews = ({ lennyList }) => {
     return (
         <div className='lenny review' id='lenny-review-container'>
             <img src={lennyImg} className='home-lenny-img' />
-            <div className="mini-lenny-container">
+            <div className='mini-lenny-container'>
                 {lennyEpisodes}
             </div>
         </div>

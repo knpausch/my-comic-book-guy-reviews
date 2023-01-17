@@ -1,16 +1,16 @@
-import React from "react";
-import { Component } from "react";
-import './App.css'
-import Banner from '../Banner/Banner'
-import RankResult from "../RankResult/RankResult";
-import EpisodeBank from "../EpisodeBank/EpisodeBank";
-import EpisodeDetail from "../EpisodeDetail/EpisodeDetail";
-import RankInterface from "../RankInterface/RankInterface";
-import PageNotFound from "../PageNotFound/PageNotFound";
-import ServerDown from "../ServerDown/ServerDown";
+import React from 'react'
+import { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import { response } from "../../apiCalls";
-import { cleanData } from "../../cleanData";
+import { response } from '../../apiCalls'
+import { cleanData } from '../../cleanData'
+import Banner from '../Banner/Banner'
+import RankResult from '../RankResult/RankResult'
+import EpisodeBank from '../EpisodeBank/EpisodeBank'
+import EpisodeDetail from '../EpisodeDetail/EpisodeDetail'
+import RankInterface from '../RankInterface/RankInterface'
+import PageNotFound from '../PageNotFound/PageNotFound'
+import ServerDown from '../ServerDown/ServerDown'
+import './App.css'
 
 class App extends Component {
   constructor() {
@@ -28,17 +28,12 @@ class App extends Component {
   getData = () => {
     response
       .then(data => this.setState({ episodes: cleanData(data) }))
-      .catch(error => this.setState({ errorMessage: "D'oh! Something went wrong. Please try again later" }))
+      .catch(error => this.setState({ errorMessage: 'D\'oh! Something went wrong. Please try again later' }))
   }
 
   componentDidMount = () => {
     this.getData()
   }
-
-  //remove when done experiementing
-  // componentDidUpdate = () => {
-  //   console.log("THIS STATE: ", this.state)
-  // }
 
   updateRating = (rating) => {
     const myEpisode = this.state.currentEpisode
@@ -80,7 +75,7 @@ class App extends Component {
 
   render() {
     return (
-      <main className="app">
+      <main className='app'>
         <Banner />
         <Switch>
           <Route exact path='/' render={() => {
@@ -90,7 +85,7 @@ class App extends Component {
                 <EpisodeBank episodes={this.state.episodes} setCurrentEpisode={this.setCurrentEpisode} />
               </div>)
           }} />
-          <Route exact path="/episodeDetails/:id" render={() => {
+          <Route exact path='/episodeDetails/:id' render={() => {
             return this.state.errorMessage ? <ServerDown errorMessage={this.state.errorMessage} /> :
               (<div>
                 <EpisodeDetail currentEpisode={this.state.currentEpisode} />

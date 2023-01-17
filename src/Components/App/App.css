@@ -1,4 +1,9 @@
-.app{
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+* {
+  font-family: 'Josefin Sans';
+}
+
+.app {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,7 +13,7 @@
 }
 
 @media screen and (max-width: 50em) {
-    .app{
+    .app {
         height: fit-content;
     }
 }

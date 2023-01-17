@@ -1,11 +1,11 @@
-import React from "react";
-import './EpisodeThumbnail.css'
+import React from 'react'
 import PropTypes from 'prop-types'
+import './EpisodeThumbnail.css'
 
 const EpisodeThumbnail = ({ name, img }) => {
     return (
         <div>
-            <img src={img} className='thumbnail-img' alt={`Simpsons episode cover of "${name}"`}/> 
+            <img src={img} className='thumbnail-img' alt={`Simpsons episode cover of "${name}"`} />
         </div>
     )
 }

@@ -1,6 +1,6 @@
-import React from "react";
-import './KrustyReviews.css'
+import React from 'react'
 import PropTypes from 'prop-types'
+import './KrustyReviews.css'
 
 const krustyImg = require('../../images/krusty.png')
 
@@ -11,9 +11,9 @@ const KrustyReviews = ({ krustyList }) => {
         )
     })
     return (
-        <div className='krusty review' id="krusty-review-container">
+        <div className='krusty review' id='krusty-review-container'>
             <img src={krustyImg} className='home-krusty-img' />
-            <div className="mini-krusty-container">
+            <div className='mini-krusty-container'>
                 {krustyEpisodes}
             </div>
         </div>

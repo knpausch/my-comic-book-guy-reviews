@@ -1,14 +1,13 @@
-import React from "react";
-import './EpisodeDetail.css'
-import EpisodeSheet from "../EpisodeSheet/EpisodeSheet";
+import React from 'react'
 import { NavLink } from 'react-router-dom'
+import EpisodeSheet from '../EpisodeSheet/EpisodeSheet'
 import PropTypes from 'prop-types'
+import './EpisodeDetail.css'
 
 const tvImg = require('../../images/tv.png')
 
 const EpisodeDetail = ({ currentEpisode }) => {
-    window.scrollTo(0,0);
-
+    window.scrollTo(0, 0)
     return (
         <div className='episode-details-and-button-container'>
             <NavLink to={`/`}>
@@ -24,7 +23,7 @@ const EpisodeDetail = ({ currentEpisode }) => {
                     popularityRating={currentEpisode.popularityRating}
                     season={currentEpisode.season}
                 />
-                <div className="img-overlay-container">
+                <div className='img-overlay-container'>
                     <img src={currentEpisode.img} className='episode-img' />
                     <img src={tvImg} className='tv-img' />
                 </div>
