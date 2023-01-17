@@ -69,9 +69,9 @@ GitHub Project Board | Figma
 
 ## Future Extensions
 - Revote after voting on a episode
-- Incorporating a "Haven't Seen it" button in case the user is unable to rate the episode
-- Show season and episode number on episode thumbnails on home view
-- Filter home view by episode name, seaons, and/or episode number
+- Incorporating a "Haven't Seen it" button in case the user didn't see that episode
+- Show season number and episode number on episode thumbnails in home view
+- Filter home view by episode name, season number, and/or episode number
 
 ## Reflection
 
